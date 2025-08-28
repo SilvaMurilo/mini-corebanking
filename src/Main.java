@@ -4,9 +4,18 @@ import Conta.Conta;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
        Conta primeiraConta = new Conta("123");
        System.out.println(primeiraConta.buscarDetalhes());
+       System.out.println(primeiraConta.depositar(-2));
+       System.out.println(primeiraConta.depositar(2.53));
+       System.out.println(primeiraConta.sacar(-2));
+       System.out.println(primeiraConta.sacar(1));
+       System.out.println(primeiraConta.sacar(2));
+       Conta segundaConta =  new Conta("456");
+       System.out.println(primeiraConta.transferir(10, segundaConta));
+       System.out.println(primeiraConta.transferir(1.43, segundaConta));
+       System.out.println("Saldo conta 1: " + primeiraConta.buscarSaldo());
+       System.out.println("Saldo conta 2: " + segundaConta.buscarSaldo());
+
     }
 }
