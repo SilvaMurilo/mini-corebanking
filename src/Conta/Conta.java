@@ -1,7 +1,7 @@
 package Conta;
 
 public class Conta {
-    private String numero;
+    private final String numero;
     private double saldo;
 
     public Conta (String numero){
